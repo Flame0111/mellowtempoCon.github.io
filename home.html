@@ -15,31 +15,23 @@
             margin: 0;
             padding: 0;
             height: 100vh; 
-        }
-        a {
-            font-size: 20px;
-            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            color: black; 
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-            margin-top: 20px;
-            padding: 20px;
-            background-image: url('cloud.png'); 
-            background-size: cover; 
-            background-position: center; 
-            border-radius: 25px; 
-            width: 80%; 
-            max-width: 500px; 
-            margin: 0 auto; 
-            }
-            .logo {
+            overflow: hidden;
+        }
+
+        .logo {
             display: block;
             margin: 20px auto;
             margin-top: 40px;
             max-width: 300px;
             animation: rotate 0.65s linear infinite ;
-            }
-            @keyframes rotate {
+        }
+
+        @keyframes rotate {
             0% {
                 transform: rotate(0deg); 
             }
@@ -53,69 +45,115 @@
                 transform: rotate(0deg);
             }
         }
-            .plan{
+
+        .plan {
             display: block;
             margin: auto;
             margin-top: 40px;
             max-width: 300px;
-            }
+        }
 
+        /* ปุ่ม Press for Information */
+        .info-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #FFB6C1; /* สีชมพูอ่อน */
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 25px; /* ขอบโค้งมน */
+            text-decoration: none;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* เงาที่ทำให้ปุ่มดูเหมือนลอย */
+            transition: all 0.3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
+            position: relative; /* ทำให้สามารถจัดตำแหน่งรถไฟภายในปุ่มได้ */
+        }
+
+        .info-button:hover {
+            background-color: #FF69B4; /* สีชมพูสดเมื่อวางเมาส์ */
+            transform: scale(1.1); /* ทำให้ปุ่มขยายขึ้น */
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ปุ่มเด่นขึ้น */
+        }
+
+        .info-button:active {
+            transform: scale(0.95); /* ลดขนาดลงเมื่อคลิก */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* ลดเงาเมื่อคลิก */
+        }
+
+        /* ตัวการ์ตูนรถไฟ */
+        .train {
+            position: absolute;
+            top: 50%;
+            left: -200px; /* เริ่มต้นรถไฟที่ด้านซ้าย */
+            width: 50px;
+            animation: moveTrain 5s linear infinite; /* ทำให้รถไฟวิ่งไปทางขวา */
+        }
+
+        /* เคลื่อนไหวของรถไฟ */
+        @keyframes moveTrain {
+            0% {
+                left: -200px; /* เริ่มต้นที่ซ้ายสุด */
+            }
+            100% {
+                left: 100%; /* วิ่งไปถึงขวาสุด */
+            }
+        }
 
         @media only screen and (max-width: 600px) {
             body {
                 background-attachment: scroll; 
             }
             .infor {
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            color: black; 
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-            margin-top: 20px;
-            padding: 20px;
-            background-image: url('cloud.png'); 
-            background-size: cover; 
-            background-position: center; 
-            border-radius: 25px; 
-            width: 80%; 
-            max-width: 500px; 
-            margin: 0 auto; 
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                color: black; 
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+                margin-top: 20px;
+                padding: 20px;
+                background-image: url('cloud.png'); 
+                background-size: cover; 
+                background-position: center; 
+                border-radius: 25px; 
+                width: 80%; 
+                max-width: 500px; 
+                margin: 0 auto; 
             }
+
             .logo {
-            display: block;
-            margin: 20px auto;
-            margin-top: 40px;
-            max-width: 300px;
-            animation: rotate 0.65s linear infinite ;
-            }
-            @keyframes rotate {
-            0% {
-                transform: rotate(0deg); 
-            }
-            25% {
-                transform: rotate(5deg); 
-            }
-            50% {
-                transform: rotate(-5deg);
-            }
-            100%{
-                transform: rotate(0deg);
-            }
-        }
-            .plan{
-            display: block;
-            margin: auto;
-            margin-top: 40px;
-            max-width: 300px;
+                display: block;
+                margin: 20px auto;
+                margin-top: 40px;
+                max-width: 300px;
+                animation: rotate 0.65s linear infinite ;
             }
 
-        }
+            .plan {
+                display: block;
+                margin: auto;
+                margin-top: 40px;
+                max-width: 300px;
+            }
 
+            /* ปรับขนาดของปุ่มในมือถือ */
+            .info-button {
+                font-size: 18px;
+                padding: 12px 24px;
+            }
+        }
     </style>
 </head>
 <body>
     <img src="MELLOW TEMPO LOGO.png" alt="Logo" class="logo">
     <img src="Floor Plan.png" alt="plan" class="plan">
-    <a href="information.html" alt='Infor'class="infor">>>Press Here for information<<</a>
+    
+    <!-- ปุ่ม Press for Information -->
+    <a href="#info" class="info-button">
+        Press for Information
+        <!-- การ์ตูนรถไฟที่วิ่ง -->
+        <img src="train.png" alt="Train" class="train">
+    </a>
+
 </body>
 </html>
