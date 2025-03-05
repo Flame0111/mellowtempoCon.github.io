@@ -12,6 +12,7 @@
             padding: 0;
             height: 100%; /* ทำให้ส่วนของหน้าเว็บเต็มขนาดหน้าจอ */
             overflow-y: auto; /* เปิดให้เลื่อนหน้าขึ้นลงได้ */
+            width: 100%; /* กำหนดให้ความกว้างเต็มหน้าจอ */
         }
 
         body {
@@ -25,6 +26,8 @@
             justify-content: flex-start; /* จัดให้เริ่มต้นจากบน */
             align-items: center;
             text-align: center;
+            height: 100%; /* ให้ body ใช้ความสูงทั้งหมด */
+            overflow: auto; /* เปิดให้เลื่อนหน้าได้ */
         }
 
         .logo {
@@ -53,88 +56,90 @@
         /* ปุ่ม Press for Information */
         .info-button {
             display: inline-block;
-            margin-top: 30px; /* ปรับระยะห่างให้ปุ่มขึ้นมา */
+            margin-top: 30px; 
             padding: 15px 30px;
-            background-color: #FF7F50; /* สีส้ม */
+            background-color: #FF7F50; 
             color: white;
             font-size: 20px;
             font-weight: bold;
             text-align: center;
-            border-radius: 50px; /* ทำให้มุมของปุ่มโค้งมน */
+            border-radius: 50px;
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงาที่ทำให้ปุ่มดูลอย */
-            transition: all 0.3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
-            position: relative; /* ทำให้สามารถจัดตำแหน่งของรูปใต้ปุ่มได้ */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+            transition: all 0.3s ease-in-out;
+            position: relative; 
         }
 
         .info-button:hover {
-            background-color: #FF6347; /* เปลี่ยนสีเมื่อวางเมาส์ */
-            transform: scale(1.1); /* ทำให้ปุ่มใหญ่ขึ้นเมื่อวางเมาส์ */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ปุ่มเด่นขึ้น */
+            background-color: #FF6347;
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
         }
 
         .info-button:active {
-            transform: scale(0.95); /* ลดขนาดลงเมื่อคลิก */
+            transform: scale(0.95);
         }
 
         /* รูป guncharlie */
         .guncharlie {
-            position: absolute; /* ทำให้รูปภาพสามารถจัดตำแหน่งได้ */
-            bottom: -100px; /* วางรูปภาพไว้ใต้ปุ่ม */
-            left: 10px; /* วางรูปภาพทางซ้าย */
-            width: 300px; /* ขนาดของรูป */
-        }
-        .timethai{
             position: absolute;
             bottom: -100px;
+            left: 10px;
+            width: 300px;
         }
 
-        @media only screen and (max-width: 600px) {
-            body {
-                height: 100%; /* ทำให้ส่วนของหน้าเว็บเต็มขนาดหน้าจอ */
-                overflow-y: auto;
-                background-attachment: scroll; 
-            }
-            .infor {
-                font-size: 20px;
-                font-weight: bold;
-                text-align: center;
-                color: black; 
-                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-                margin-top: 10px;
-                padding: 20px;
-                background-image: url('cloud.png'); 
-                background-size: cover; 
-                background-position: center; 
-                border-radius: 25px; 
-                width: 80%; 
-                max-width: 500px; 
-                margin: 0 auto; 
+        .timethai {
+            position: absolute;
+            bottom: -100px;
+            left: 300px;
+            width: 300px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* ปรับให้เหมาะกับหน้าจอแท็บเล็ตหรือโทรศัพท์ขนาดใหญ่ */
+            .logo {
+                max-width: 250px;
             }
 
-            .logo {
-                display: block;
-                margin: 20px auto;
-                margin-top: 40px;
-                max-width: 300px;
-                animation: rotate 0.65s linear infinite ;
-            }
-            /* ปรับขนาดของปุ่มในมือถือ */
             .info-button {
                 font-size: 18px;
                 padding: 12px 24px;
             }
 
-            /* ปรับขนาดรูป guncharlie บนมือถือ */
             .guncharlie {
-                bottom: 85px; /* ปรับตำแหน่งให้เหมาะสม */
-                left: -10px;
-                width: 200px; /* ขนาดของรูป */
-            }
-            .timethai{
                 bottom: 85px;
-                left: 190px;
-                width: 189px;
+                left: -10px;
+                width: 200px; /* ปรับขนาดรูปให้พอดีกับมือถือ */
+            }
+
+            .timethai {
+                bottom: 85px;
+                left: 180px;
+                width: 180px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            /* ปรับให้เหมาะกับมือถือขนาดเล็ก */
+            .logo {
+                max-width: 200px;
+            }
+
+            .info-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .guncharlie {
+                bottom: 70px;
+                left: 0;
+                width: 180px; /* ปรับขนาดรูปให้พอดีกับมือถือ */
+            }
+
+            .timethai {
+                bottom: 70px;
+                left: 150px;
+                width: 150px;
             }
         }
     </style>
@@ -142,13 +147,11 @@
 <body>
     <img src="MELLOW TEMPO LOGO.png" alt="Logo" class="logo">
     
-    
     <!-- ปุ่ม Press for Information -->
     <a href="information.html" class="info-button">Press for Information</a>
 
     <!-- รูป guncharlie -->
     <img src="guncharlie.png" alt="Guncharlie" class="guncharlie">
-    <img src="timethai.png " alt="timethai" class="timethai">
-
+    <img src="timethai.png" alt="timethai" class="timethai">
 </body>
 </html>
