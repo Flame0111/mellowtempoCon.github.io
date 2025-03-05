@@ -14,10 +14,10 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh; 
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* จัดให้เริ่มต้นจากบน */
             align-items: center;
             text-align: center;
             overflow: hidden;
@@ -49,7 +49,6 @@
         .plan {
             display: block;
             margin: auto;
-            margin-bottom: 10px;
             margin-top: 40px;
             max-width: 300px;
         }
@@ -57,28 +56,27 @@
         /* ปุ่ม Press for Information */
         .info-button {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 30px; /* ปรับระยะห่างให้ปุ่มขึ้นมา */
             padding: 15px 30px;
-            background-color: #FFB6C1; /* สีชมพูอ่อน */
+            background-color: #FF7F50; /* สีส้ม */
             color: white;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             text-align: center;
-            border-radius: 25px; /* ขอบโค้งมน */
+            border-radius: 50px; /* ทำให้มุมของปุ่มโค้งมน */
             text-decoration: none;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* เงาที่ทำให้ปุ่มดูเหมือนลอย */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงาที่ทำให้ปุ่มดูลอย */
             transition: all 0.3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
         }
 
         .info-button:hover {
-            background-color: #FF69B4; /* สีชมพูสดเมื่อวางเมาส์ */
-            transform: scale(1.1); /* ทำให้ปุ่มขยายขึ้น */
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ปุ่มเด่นขึ้น */
+            background-color: #FF6347; /* เปลี่ยนสีเมื่อวางเมาส์ */
+            transform: scale(1.1); /* ทำให้ปุ่มใหญ่ขึ้นเมื่อวางเมาส์ */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ปุ่มเด่นขึ้น */
         }
 
         .info-button:active {
             transform: scale(0.95); /* ลดขนาดลงเมื่อคลิก */
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* ลดเงาเมื่อคลิก */
         }
 
         @media only screen and (max-width: 600px) {
@@ -91,7 +89,7 @@
                 text-align: center;
                 color: black; 
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-                margin-top: 20px;
+                margin-top: 10px;
                 padding: 20px;
                 background-image: url('cloud.png'); 
                 background-size: cover; 
@@ -113,6 +111,7 @@
             .plan {
                 display: block;
                 margin: auto;
+                margin-bottom: 10px;
                 margin-top: 40px;
                 max-width: 300px;
             }
