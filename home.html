@@ -9,22 +9,20 @@
     <style>
         /* ทำให้หน้าเว็บสามารถเลื่อนขึ้นลงได้ */
         body {
-            background-image: url('BackGround.jpg'), linear-gradient(to bottom, rgba(189, 99, 99, 0.8), rgba(0, 0, 0, 1));
-            background-size: cover,cover;
-            /* ใช้ cover เพื่อให้ภาพไม่ยืด */
-            background-position: center top;
-            /* ตำแหน่งของภาพเริ่มต้นจากด้านบน */
-            background-attachment: fixed;
+            background-image: url('BackGround.jpg'), linear-gradient(to bottom, rgba(189, 99, 99, 0.8), rgba(0, 0, 0, 1)); 
+            background-size: cover, cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
             font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: flex-start; /* จัดให้เริ่มต้นจากบน */
             align-items: center;
             text-align: center;
-            height: 932px;
-            /* กำหนดความสูงที่ 932px */
             overflow: hidden;
-            /* ซ่อนส่วนที่เกินจากความสูง */
         }
 
 
