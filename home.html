@@ -49,6 +49,7 @@
         .plan {
             display: block;
             margin: auto;
+            margin-bottom: 10px;
             margin-top: 40px;
             max-width: 300px;
         }
@@ -67,6 +68,7 @@
             text-decoration: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงาที่ทำให้ปุ่มดูลอย */
             transition: all 0.3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
+            position: relative; /* ทำให้สามารถจัดตำแหน่งของรูปใต้ปุ่มได้ */
         }
 
         .info-button:hover {
@@ -77,6 +79,14 @@
 
         .info-button:active {
             transform: scale(0.95); /* ลดขนาดลงเมื่อคลิก */
+        }
+
+        /* รูป guncharlie */
+        .guncharlie {
+            position: absolute; /* ทำให้รูปภาพสามารถจัดตำแหน่งได้ */
+            bottom: -10px; /* วางรูปภาพไว้ใต้ปุ่ม */
+            left: 20px; /* วางรูปภาพทางซ้าย */
+            width: 300px; /* ขนาดของรูป */
         }
 
         @media only screen and (max-width: 600px) {
@@ -121,6 +131,7 @@
                 font-size: 18px;
                 padding: 12px 24px;
             }
+
         }
     </style>
 </head>
@@ -130,6 +141,9 @@
     
     <!-- ปุ่ม Press for Information -->
     <a href="information.html" class="info-button">Press for Information</a>
+
+    <!-- รูป guncharlie -->
+    <img src="guncharlie.png" alt="Guncharlie" class="guncharlie">
 
 </body>
 </html>
