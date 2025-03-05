@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,42 +9,49 @@
     <style>
         /* ทำให้หน้าเว็บสามารถเลื่อนขึ้นลงได้ */
         body {
-            background-image: url('BackGround.jpg'), linear-gradient(to bottom, rgba(189, 99, 99, 0.8), rgba(0, 0, 0, 1)); 
-            background-size: cover, cover; 
-            background-position: center center; 
-            background-attachment: fixed; 
+            background-image: url('BackGround.jpg'), linear-gradient(to bottom, rgba(189, 99, 99, 0.8), rgba(0, 0, 0, 1));
+            background-size: 100% 932px, cover;
+            /* กำหนดให้แบ็คกราวด์แสดงความสูงที่ 932px */
+            background-position: center center;
+            background-attachment: fixed;
             font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* จัดให้เริ่มต้นจากบน */
+            justify-content: flex-start;
+            /* จัดให้เริ่มต้นจากบน */
             align-items: center;
             text-align: center;
-            height: 0px;
+            height: 932px;
+            /* กำหนดความสูงที่ 932px */
         }
+
 
         .logo {
             display: block;
             margin: 20px auto;
             margin-top: 40px;
             max-width: 300px;
-            animation: rotate 0.65s linear infinite ;
+            animation: rotate 0.65s linear infinite;
         }
 
-        .artist{
+        .artist {
             position: absolute;
         }
 
         @keyframes rotate {
             0% {
-                transform: rotate(0deg); 
+                transform: rotate(0deg);
             }
+
             25% {
-                transform: rotate(5deg); 
+                transform: rotate(5deg);
             }
+
             50% {
                 transform: rotate(-5deg);
             }
-            100%{
+
+            100% {
                 transform: rotate(0deg);
             }
         }
@@ -51,18 +59,18 @@
         /* ปุ่ม Press for Information */
         .info-button {
             display: inline-block;
-            margin-top: 30px; 
+            margin-top: 30px;
             padding: 15px 30px;
-            background-color: #FF7F50; 
+            background-color: #FF7F50;
             color: white;
             font-size: 20px;
             font-weight: bold;
             text-align: center;
             border-radius: 50px;
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease-in-out;
-            position: relative; 
+            position: relative;
         }
 
         .info-button:hover {
@@ -78,6 +86,7 @@
         /* รูป guncharlie */
 
         @media only screen and (max-width: 768px) {
+
             /* ปรับให้เหมาะกับหน้าจอแท็บเล็ตหรือโทรศัพท์ขนาดใหญ่ */
             .logo {
                 max-width: 250px;
@@ -87,7 +96,8 @@
                 font-size: 18px;
                 padding: 12px 24px;
             }
-            .artist{
+
+            .artist {
                 bottom: -80px;
                 max-width: 400px;
             }
@@ -95,6 +105,7 @@
         }
 
         @media only screen and (max-width: 480px) {
+
             /* ปรับให้เหมาะกับมือถือขนาดเล็ก */
             .logo {
                 max-width: 200px;
@@ -104,18 +115,21 @@
                 font-size: 16px;
                 padding: 10px 20px;
             }
-            .artist{
+
+            .artist {
                 bottom: -80px;
                 max-width: 380px;
             }
         }
     </style>
 </head>
+
 <body>
     <img src="MELLOW TEMPO LOGO.png" alt="Logo" class="logo">
-    
+
     <!-- ปุ่ม Press for Information -->
     <a href="information.html" class="info-button">Press for Information.</a>
     <img src="sinlapin.png" alt="Sinlapin" class="artist">
 </body>
+
 </html>
