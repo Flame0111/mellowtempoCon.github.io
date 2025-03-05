@@ -49,7 +49,7 @@
         .plan {
             display: block;
             margin: auto;
-            margin-bottom: 0;
+            margin-bottom: 10px;
             margin-top: 40px;
             max-width: 300px;
         }
@@ -68,7 +68,6 @@
             text-decoration: none;
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* เงาที่ทำให้ปุ่มดูเหมือนลอย */
             transition: all 0.3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
-            position: relative; /* ทำให้สามารถจัดตำแหน่งรถไฟภายในปุ่มได้ */
         }
 
         .info-button:hover {
@@ -80,25 +79,6 @@
         .info-button:active {
             transform: scale(0.95); /* ลดขนาดลงเมื่อคลิก */
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* ลดเงาเมื่อคลิก */
-        }
-
-        /* ตัวการ์ตูนรถไฟ */
-        .train {
-            position: absolute;
-            top: 50%;
-            left: -200px; /* เริ่มต้นรถไฟที่ด้านซ้าย */
-            width: 50px;
-            animation: moveTrain 5s linear infinite; /* ทำให้รถไฟวิ่งไปทางขวา */
-        }
-
-        /* เคลื่อนไหวของรถไฟ */
-        @keyframes moveTrain {
-            0% {
-                left: -200px; /* เริ่มต้นที่ซ้ายสุด */
-            }
-            100% {
-                left: 100%; /* วิ่งไปถึงขวาสุด */
-            }
         }
 
         @media only screen and (max-width: 600px) {
@@ -133,15 +113,12 @@
             .plan {
                 display: block;
                 margin: auto;
-                margin-bottom: auto;
                 margin-top: 40px;
-                margin-bottom: 0px;
                 max-width: 300px;
             }
 
             /* ปรับขนาดของปุ่มในมือถือ */
             .info-button {
-                margin-top: 0px;
                 font-size: 18px;
                 padding: 12px 24px;
             }
@@ -153,9 +130,7 @@
     <img src="Floor Plan.png" alt="plan" class="plan">
     
     <!-- ปุ่ม Press for Information -->
-    <a href="#info" class="info-button">
-        Press for Information
-    </a>
+    <a href="#info" class="info-button">Press for Information</a>
 
 </body>
 </html>
