@@ -38,6 +38,10 @@
             animation: rotate 0.65s linear infinite ;
         }
 
+        .artist{
+            position: absolute;
+        }
+
         @keyframes rotate {
             0% {
                 transform: rotate(0deg); 
@@ -81,19 +85,6 @@
         }
 
         /* รูป guncharlie */
-        .guncharlie {
-            position: absolute;
-            bottom: -100px;
-            left: 10px;
-            width: 300px;
-        }
-
-        .timethai {
-            position: absolute;
-            bottom: -100px;
-            left: 300px;
-            width: 300px;
-        }
 
         @media only screen and (max-width: 768px) {
             /* ปรับให้เหมาะกับหน้าจอแท็บเล็ตหรือโทรศัพท์ขนาดใหญ่ */
@@ -105,18 +96,11 @@
                 font-size: 18px;
                 padding: 12px 24px;
             }
-
-            .guncharlie {
-                bottom: 85px;
-                left: -10px;
-                width: 200px; /* ปรับขนาดรูปให้พอดีกับมือถือ */
+            .artist{
+                bottom: -40px;
+                max-width: 400px;
             }
 
-            .timethai {
-                bottom: 85px;
-                left: 180px;
-                width: 180px;
-            }
         }
 
         @media only screen and (max-width: 480px) {
@@ -129,17 +113,9 @@
                 font-size: 16px;
                 padding: 10px 20px;
             }
-
-            .guncharlie {
-                bottom: 140px;
-                left: 0;
-                width: 200px; /* ปรับขนาดรูปให้พอดีกับมือถือ */
-            }
-
-            .timethai {
-                bottom: 140px;
-                right: 0px;
-                width: 190px;
+            .artist{
+                bottom: -40px;
+                max-width: 380px;
             }
         }
     </style>
@@ -149,9 +125,6 @@
     
     <!-- ปุ่ม Press for Information -->
     <a href="information.html" class="info-button">Press for Information.</a>
-
-    <!-- รูป guncharlie -->
-    <img src="guncharlie.png" alt="Guncharlie" class="guncharlie">
-    <img src="timethai.png" alt="timethai" class="timethai">
+    <img src="sinlapin.png" alt="Sinlapin" class="artist">
 </body>
 </html>
